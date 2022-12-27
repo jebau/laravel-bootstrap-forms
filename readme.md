@@ -5,7 +5,7 @@ Bootstrap 5 form components for Laravel.
 ## Installation
 
 ```console
-composer require bastinald/laravel-bootstrap-forms
+composer require jebau/laravel-bootstrap-forms
 ```
 
 ## Usage
