@@ -1,4 +1,4 @@
-@props(['label', 'error' => '', 'help'])
+@props(['value','label', 'error' => '', 'help'])
 
 @php
     /** @var Illuminate\View\ComponentAttributeBag $attributes */
@@ -21,7 +21,11 @@
         <label for="{{ $id }}" class="form-label">{!! $label !!}</label>
     @endisset
 
-    <textarea {{ $attributes }}></textarea>
+    @if (isset($value))
+        <textarea {{ $attributes }}>{{$value}}</textarea>
+    @else
+        <textarea {{ $attributes }}></textarea>
+    @endif
 
     @error($error)
         <div class="invalid-feedback">{{ $message }}</div>
